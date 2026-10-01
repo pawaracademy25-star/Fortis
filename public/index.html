@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORTIS | Luxury Athletic Club & Performance Sanctuary</title>
+  <meta name="description" content="Fortis is an ultra-minimalist athletic sanctuary combining Olympic strength mechanics, high-intensity conditioning, and contrast thermal recovery. Book your 1-day pass or reserve class spots.">
+  <meta name="theme-color" content="#090a0c">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Modern Navigation -->
+  <header class="header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" id="brandLogo">
+        <span class="logo-symbol"></span>
+        <span>FORTIS</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="mainNavLinks">
+          <li><a href="#schedule" class="nav-link">Schedule</a></li>
+          <li><a href="#trial" class="nav-link">VIP Trial</a></li>
+          <li><a href="#memberships" class="nav-link">Memberships</a></li>
+          <li><a href="#biometrics" class="nav-link">Fitness Engine</a></li>
+          <li><a href="#facilities" class="nav-link">Sanctuary</a></li>
+          <li><a href="#trainers" class="nav-link">Coaches</a></li>
+          <li><a href="#concierge" class="nav-link">Concierge</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#trial" class="btn btn-primary btn-sm" id="navTrialCta">Claim 1-Day Pass</a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-content">
+      <div class="hero-live-badge">
+        <span class="live-pulse"></span>
+        <span>SANCTUARY OPEN • 05:00 - 23:00 • LIVE OCCUPANCY: 38%</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Pure Science of <span class="text-volt">Human Force</span> & Recovery.
+      </h1>
+
+      <p class="hero-desc">
+        A minimalist athletic club built for elite biomechanics, Olympic barbell precision, and clinical contrast recovery. Zero crowds, zero distractions.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#trial" class="btn btn-primary" id="heroClaimTrialBtn">Claim Free 1-Day Pass</a>
+        <a href="#schedule" class="btn btn-secondary" id="heroExploreScheduleBtn">Explore Live Schedule</a>
+      </div>
+
+      <!-- Live Performance Metrics Ticker -->
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <span class="metric-val">2,500<span class="text-volt">m²</span></span>
+          <span class="metric-lbl">Acoustic Training Floor</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">3<span class="text-volt">°C</span></span>
+          <span class="metric-lbl">Cryo-Thermal Plunge</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">100<span class="text-volt">%</span></span>
+          <span class="metric-lbl">Eleiko Calibrated Gear</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">1:8</span>
+          <span class="metric-lbl">Max Coach to Athlete Ratio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Class Schedule & Spot Reservation -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Real-Time Floor Schedule</span>
+        <h2>Reserve Your Spot on the Floor</h2>
+        <p class="section-subtitle">
+          Small-group technical sessions capped at 16 athletes. Real-time availability synced with our floor sensors.
+        </p>
+      </div>
+
+      <!-- Schedule Filter Controls -->
+      <div class="schedule-controls">
+        <div class="day-selector" id="daySelector">
+          <button class="day-tab active" data-day="Monday">Monday</button>
+          <button class="day-tab" data-day="Tuesday">Tuesday</button>
+          <button class="day-tab" data-day="Wednesday">Wednesday</button>
+          <button class="day-tab" data-day="Thursday">Thursday</button>
+          <button class="day-tab" data-day="Friday">Friday</button>
+          <button class="day-tab" data-day="Saturday">Saturday</button>
+          <button class="day-tab" data-day="Sunday">Sunday</button>
+        </div>
+
+        <div class="category-filter" id="categoryFilter">
+          <button class="filter-chip active" data-category="All">All Disciplines</button>
+          <button class="filter-chip" data-category="Strength">Strength & Hypertrophy</button>
+          <button class="filter-chip" data-category="HIIT">Metabolic Conditioning</button>
+          <button class="filter-chip" data-category="Boxing">Combat & Striking</button>
+          <button class="filter-chip" data-category="Recovery">Thermal Recovery</button>
+        </div>
+      </div>
+
+      <!-- Classes Grid -->
+      <div class="schedule-grid" id="scheduleGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 1-Day VIP Trial Pass Section -->
+  <section class="section trial-section" id="trial">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Complimentary Guest Access</span>
+        <h2>Experience Fortis For One Day</h2>
+        <p class="section-subtitle">
+          Enjoy unrestricted access to our lifting floor, steam room, and 3°C cold plunge suite. No contracts, no commitment.
+        </p>
+      </div>
+
+      <div class="trial-wrapper">
+        <!-- Left: Form -->
+        <form class="trial-form" id="trialPassForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="trialFullName">Athlete Full Name</label>
+              <input type="text" id="trialFullName" class="form-control" placeholder="e.g. Alexander Cole" required>
+            </div>
+            <div class="form-group">
+              <label for="trialEmail">Email Address</label>
+              <input type="email" id="trialEmail" class="form-control" placeholder="alex@domain.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="trialPhone">Mobile Phone</label>
+              <input type="tel" id="trialPhone" class="form-control" placeholder="+1 (555) 234-5678" required>
+            </div>
+            <div class="form-group">
+              <label for="trialDate">Preferred Activation Date</label>
+              <input type="date" id="trialDate" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="trialGoal">Primary Training Focus</label>
+            <select id="trialGoal" class="form-control">
+              <option value="Hypertrophy & Heavy Compound Strength">Hypertrophy & Heavy Compound Strength</option>
+              <option value="Athletic Conditioning & VO2 Max">Athletic Conditioning & VO2 Max</option>
+              <option value="Combat Striking & High-Speed Agility">Combat Striking & High-Speed Agility</option>
+              <option value="Contrast Cryotherapy & Recovery">Contrast Cryotherapy & Recovery</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="generatePassBtn" style="margin-top: 0.5rem;">
+            Generate VIP Digital Pass
+          </button>
+          <span style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+            Instant digital pass generation with unique verification barcode.
+          </span>
+        </form>
+
+        <!-- Right: Digital Pass Preview -->
+        <div class="pass-card-container" id="passCardPreview">
+          <div class="vip-pass-card">
+            <div class="pass-watermark">FORTIS</div>
+            <div class="pass-card-top">
+              <div class="pass-logo"><span class="logo-symbol" style="width:18px;height:18px;"></span> FORTIS</div>
+              <div class="pass-type-badge">1-DAY VIP ACCESS</div>
+            </div>
+            <div class="pass-details">
+              <div>
+                <div class="pass-field-label">Guest Athlete</div>
+                <div class="pass-field-value">Awaiting Registration</div>
+              </div>
+              <div style="display:flex; justify-content: space-between;">
+                <div>
+                  <div class="pass-field-label">Access Status</div>
+                  <div class="pass-field-value font-mono" style="color: var(--accent-volt);">READY TO ISSUE</div>
+                </div>
+                <div>
+                  <div class="pass-field-label">Valid Duration</div>
+                  <div class="pass-field-value font-mono">24 Hours</div>
+                </div>
+              </div>
+              <div>
+                <div class="pass-field-label">Location Access</div>
+                <div class="pass-field-value" style="font-size: 0.85rem; color: var(--text-secondary);">Fortis Athletic Club - Flagship Sanctuary</div>
+              </div>
+            </div>
+            <div class="pass-code-display">
+              <div class="pass-field-label" style="margin-bottom: 0.25rem;">Concierge Authentication Code</div>
+              <div class="pass-code-val">FTS-DEMO-00</div>
+              <div class="pass-barcode">
+                <span class="barcode-line" style="width: 2px;"></span>
+                <span class="barcode-line" style="width: 4px;"></span>
+                <span class="barcode-line" style="width: 1px;"></span>
+                <span class="barcode-line" style="width: 5px;"></span>
+                <span class="barcode-line" style="width: 2px;"></span>
+                <span class="barcode-line" style="width: 6px;"></span>
+                <span class="barcode-line" style="width: 3px;"></span>
+                <span class="barcode-line" style="width: 4px;"></span>
+              </div>
+            </div>
+            <div style="text-align: center; font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">
+              Fill the form to activate your personal barcoded pass
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Membership Configurator -->
+  <section class="section" id="memberships">
+    <div class="container">
+      <div class="section-header" style="text-align: center; max-width: 680px; margin-left: auto; margin-right: auto;">
+        <span class="section-tag">Club Membership</span>
+        <h2>Transparent Tiers. Zero Hidden Fees.</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 0 auto;">
+          Choose the level of immersion that matches your discipline. All memberships include full facility access, towel service, and digital locker key.
+        </p>
+      </div>
+
+      <!-- Billing Toggle -->
+      <div class="billing-toggle-wrapper">
+        <span class="billing-label" id="billingMonthlyLabel">Monthly Billing</span>
+        <label class="switch">
+          <input type="checkbox" id="billingToggle" checked>
+          <span class="slider"></span>
+        </label>
+        <span class="billing-label active" id="billingAnnualLabel">Annual Billing</span>
+        <span class="discount-badge">Save 20%</span>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="pricing-grid" id="pricingGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Biometrics & Caloric Target Calculator -->
+  <section class="section" id="biometrics" style="background: rgba(255, 255, 255, 0.01);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Fitness Engine</span>
+        <h2>Precision Metabolic & Caloric Calculator</h2>
+        <p class="section-subtitle">
+          Input your physiological metrics to instantly calculate your Body Mass Index (BMI), Basal Metabolic Rate (BMR), Daily Target Calories, and bespoke training protocol recommendation.
+        </p>
+      </div>
+
+      <div class="calc-card">
+        <!-- Controls -->
+        <div class="calc-inputs">
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="slider-label">Body Weight</span>
+              <span class="slider-value" id="calcWeightVal">78 kg</span>
+            </div>
+            <input type="range" id="calcWeight" min="45" max="140" value="78" step="1">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="slider-label">Height</span>
+              <span class="slider-value" id="calcHeightVal">180 cm</span>
+            </div>
+            <input type="range" id="calcHeight" min="140" max="215" value="180" step="1">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="slider-label">Age</span>
+              <span class="slider-value" id="calcAgeVal">28 yrs</span>
+            </div>
+            <input type="range" id="calcAge" min="16" max="75" value="28" step="1">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="calcGoal">Primary Objective</label>
+              <select id="calcGoal" class="form-control">
+                <option value="hypertrophy">Muscle Hypertrophy & Strength</option>
+                <option value="fatloss">Aggressive Lean Recomposition</option>
+                <option value="performance">Athletic VO2 & Conditioning</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="calcActivity">Weekly Training Intensity</label>
+              <select id="calcActivity" class="form-control">
+                <option value="1.2">Light (1-2 sessions/week)</option>
+                <option value="1.55" selected>Moderate (3-5 sessions/week)</option>
+                <option value="1.75">High (6+ sessions/week)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-time Results Panel -->
+        <div class="calc-results-panel">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 1.25rem;">
+              Calculated Target Metrics
+            </div>
+
+            <div class="result-stat-box">
+              <div class="stat-box">
+                <div class="stat-box-num" id="resBmi">24.1</div>
+                <div class="stat-box-lbl">Body Mass Index</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-box-num text-volt" id="resCalories">2,850</div>
+                <div class="stat-box-lbl">Daily Target (kcal)</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-box-num" id="resProtein">172g</div>
+                <div class="stat-box-lbl">Target Protein / Day</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-box-num" style="color: var(--accent-energy);">Zone 4</div>
+                <div class="stat-box-lbl">Anaerobic Heart Rate</div>
+              </div>
+            </div>
+
+            <div class="calc-recommendation">
+              <div class="rec-title">Prescribed Fortis Protocol</div>
+              <div class="rec-desc" id="resRecommendation">
+                Focus on our Hypertrophy Protocol and Olympic Barbell Lab with high-density volume and slight caloric surplus.
+              </div>
+            </div>
+          </div>
+
+          <a href="#schedule" class="btn btn-secondary btn-block btn-sm" style="text-align: center;">
+            View Recommended Sessions on Schedule →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sanctuary Facilities & Architecture Showcase -->
+  <section class="section" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sanctuary Architecture</span>
+        <h2>Engineered for Focus. Stripped of Distraction.</h2>
+        <p class="section-subtitle">
+          Every square meter of Fortis is acoustically isolated, climate-regulated to 19°C, and fitted with clinical air purification.
+        </p>
+      </div>
+
+      <div class="facilities-container">
+        <!-- Tab Selectors -->
+        <div class="facility-tabs">
+          <button class="facility-tab-btn active" data-facility="strength">
+            <h3 class="facility-btn-title">The Iron Hall</h3>
+            <p class="facility-btn-desc">8 Olympic platforms, calibrated Eleiko discs, and custom power racks.</p>
+          </button>
+
+          <button class="facility-tab-btn" data-facility="recovery">
+            <h3 class="facility-btn-title">Thermal Recovery Spa</h3>
+            <p class="facility-btn-desc">Finnish cedar 90°C dry sauna, 3°C cold immersion plunge, Normatec boots.</p>
+          </button>
+
+          <button class="facility-tab-btn" data-facility="combat">
+            <h3 class="facility-btn-title">Combat Arena & MetCon</h3>
+            <p class="facility-btn-desc">Water heavy bags, 30m turf sled sprint track, and Concept2 rowers.</p>
+          </button>
+
+          <button class="facility-tab-btn" data-facility="cardio">
+            <h3 class="facility-btn-title">Cardio Mezzanine</h3>
+            <p class="facility-btn-desc">Woodway curved runners, Technogym Artis Live suites, telemetry feedback.</p>
+          </button>
+        </div>
+
+        <!-- Interactive Preview Window -->
+        <div class="facility-preview-window">
+          <img src="/assets/strength-zone.jpg" alt="Gym Sanctuary Facility" class="facility-img" id="facilityPreviewImg">
+          <div class="facility-overlay-info">
+            <span class="facility-spec-tag" id="facilitySpecTag">
+              8 Calibrated Eleiko Platforms • Rogue Monster Racks • Ivanko Cast Iron
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Coaches Roster -->
+  <section class="section" id="trainers">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Elite Cadre</span>
+        <h2>Led by World-Class Practitioners</h2>
+        <p class="section-subtitle">
+          Our coaches hold master-level degrees in human biomechanics, exercise physiology, or competitive combat accolades.
+        </p>
+      </div>
+
+      <div class="trainers-grid" id="trainersGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Concierge & Inquiries Form -->
+  <section class="section" id="concierge" style="background: rgba(255, 255, 255, 0.015);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Concierge Desk</span>
+        <h2>Schedule a Private Walkthrough</h2>
+        <p class="section-subtitle">
+          Have specific inquiries regarding personal training, corporate memberships, or recovery protocols? Our club concierge is at your service.
+        </p>
+      </div>
+
+      <div class="concierge-grid">
+        <!-- Details -->
+        <div class="concierge-info">
+          <div class="info-item">
+            <span class="info-lbl">Club Location</span>
+            <span class="info-val">420 Obsidian Boulevard, Design District</span>
+          </div>
+          <div class="info-item">
+            <span class="info-lbl">Floor Hours</span>
+            <span class="info-val">Monday – Friday: 05:00 – 23:00<br>Saturday – Sunday: 07:00 – 21:00</span>
+          </div>
+          <div class="info-item">
+            <span class="info-lbl">Concierge Direct</span>
+            <span class="info-val font-mono">+1 (800) 489-FORTIS</span>
+          </div>
+          <div class="info-item">
+            <span class="info-lbl">Inquiries Dispatch</span>
+            <span class="info-val font-mono">concierge@fortis-sanctuary.com</span>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="trial-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" class="form-control" placeholder="Jordan Vance" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="jordan@domain.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactPhone">Phone (Optional)</label>
+              <input type="tel" id="contactPhone" class="form-control" placeholder="+1 (555) 000-0000">
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <select id="contactSubject" class="form-control">
+                <option value="Private Facility Tour">Private Facility Tour</option>
+                <option value="1-on-1 Performance Coaching">1-on-1 Performance Coaching</option>
+                <option value="Executive Membership Inquiries">Executive Membership Inquiries</option>
+                <option value="Contrast Spa & Recovery Protocols">Contrast Spa & Recovery Protocols</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message or Request</label>
+            <textarea id="contactMessage" class="form-control" rows="4" placeholder="Let us know your current training background and when you would like to visit." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="contactSubmitBtn">
+            Send Concierge Dispatch
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Footer (No Admin Links or Controls Expose) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-symbol"></span>
+            <span>FORTIS</span>
+          </a>
+          <p>
+            An uncompromising athletic club dedicated to biomechanical strength, metabolic conditioning, and clinical thermal recovery.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#schedule" class="footer-link">Session Schedule</a></li>
+            <li><a href="#trial" class="footer-link">1-Day VIP Pass</a></li>
+            <li><a href="#memberships" class="footer-link">Membership Plans</a></li>
+            <li><a href="#biometrics" class="footer-link">Caloric Engine</a></li>
+            <li><a href="#facilities" class="footer-link">Sanctuary Floor</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Club Amenities</div>
+          <ul class="footer-links">
+            <li><span class="footer-link">Eleiko Olympic Platforms</span></li>
+            <li><span class="footer-link">Finnish 90°C Cedar Sauna</span></li>
+            <li><span class="footer-link">3°C Cryo-Thermal Plunge</span></li>
+            <li><span class="footer-link">InBody 770 Composition Scan</span></li>
+            <li><span class="footer-link">Keyless Biometric Lockers</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">The Fortis Journal</div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Bi-weekly research summaries on progressive overload, cryotherapy, and metabolic conditioning.
+          </p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="athlete@domain.com" required>
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 FORTIS Athletic Club. All rights reserved.</div>
+        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+          STATUS: FLOORS ACTIVE • ZERO ADMIN CONTROLS EXPOSED
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal: Class Spot Reservation -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <span class="section-tag" style="margin-bottom: 0.5rem;">Reserve Session Spot</span>
+      <h3 style="margin-bottom: 1rem;">Confirm Athlete Spot</h3>
+      
+      <div id="modalClassDetails">
+        <!-- Injected dynamically -->
+      </div>
+
+      <form id="classBookingForm" class="trial-form">
+        <input type="hidden" id="bookingDate">
+        <div class="form-group">
+          <label for="bookingFullName">Athlete Full Name</label>
+          <input type="text" id="bookingFullName" class="form-control" placeholder="Marcus Cole" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bookingEmail">Email Address</label>
+            <input type="email" id="bookingEmail" class="form-control" placeholder="marcus@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label for="bookingPhone">Mobile Number</label>
+            <input type="tel" id="bookingPhone" class="form-control" placeholder="+1 (555) 019-2834" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">
+          Confirm Spot Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Membership Selection Checkout -->
+  <div class="modal-backdrop" id="planModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <span class="section-tag" style="margin-bottom: 0.5rem;">Membership Invitation</span>
+      <h3 style="margin-bottom: 1rem;">Begin Your Enrollment</h3>
+      
+      <div id="modalPlanDetails">
+        <!-- Injected dynamically -->
+      </div>
+
+      <form id="membershipEnrollForm" class="trial-form">
+        <div class="form-group">
+          <label for="enrollName">Full Name</label>
+          <input type="text" id="enrollName" class="form-control" placeholder="Alexander Cole" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enrollEmail">Email Address</label>
+            <input type="email" id="enrollEmail" class="form-control" placeholder="alex@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label for="enrollPhone">Phone</label>
+            <input type="tel" id="enrollPhone" class="form-control" placeholder="+1 (555) 234-5678" required>
+          </div>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
+          Our concierge will verify induction spot availability and prepare your personalized membership credentials.
+        </p>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">
+          Submit Membership Enrollment
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Real-time Toast Notifications Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Logic -->
+  <script src="/js/app.js"></script>
+</body>
+</html>
